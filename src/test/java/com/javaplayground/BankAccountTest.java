@@ -47,9 +47,9 @@ public class BankAccountTest {
     @Test
     @DisplayName("Cannot deposit negative amount")
     void testDepositNegative() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            account.deposit(-100.0);
-        });
+        assertThrows(IllegalArgumentException.class, () ->
+            account.deposit(-100.0)
+        );
         assertEquals(1000.0, account.getBalance(), 0.01);
     }
     
