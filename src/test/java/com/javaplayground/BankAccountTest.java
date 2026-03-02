@@ -56,8 +56,8 @@ public class BankAccountTest {
     @Test
     @DisplayName("Cannot create account with negative initial balance")
     void testConstructorNegativeBalance() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            new BankAccount("99999", -100.0);
-        });
+        assertThrows(IllegalArgumentException.class, () ->
+            new BankAccount("99999", -100.0)
+        );
     }
 }
